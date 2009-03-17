@@ -15,15 +15,14 @@ echo $this->doctype()
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
-// echo $this->headTitle();
-// echo $this->placeholder('css');
+echo $this->placeholder('css'),"\n";
+echo $this->headTitle(),"\n";
 // echo $this->placeholder('js');
 // echo $this->headScript();
 // echo $this->headStyle();
 ?>
 </head>
 <body>
-  <h1><?php echo $this->placeholder('title'); ?></h1>
-  <?php echo $this->layout()->content ?>
+<?php echo $this->layout()->content ?>
 </body>
 </html>

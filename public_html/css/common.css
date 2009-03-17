@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    background-color: #EAEAEA;
+}
+
+#version {
+    margin:0;
+    font-size: small;
+}
+
+dt {
+    margin: 0;
+    padding: 0;
+    display: block;
+    float: left;
+    clear: left;
+    width: 14em;
+}
+
+h1 {
+    background: url(/images/logo_small.gif) no-repeat center left;
+    margin: 1px 1px 0 3%;
+    padding: 5px 0 5px 150px;
+}
+
+h2 {
+    background-color: #D2E4E9;
+    padding-left: 10px;
+}
+
+h3 {
+    padding-left: 10px;
+    border-left: 10px solid #D2E4E9;
+}
+
+div#contents {
+    margin: 0 7% 0 7%;
+    padding: 1% 3%;
+    border-left: 1px solid #999999;
+    border-right: 1px solid #999999;
+    border-bottom: 1px solid #999999;
+    background-color: white;
+}
+
+div#header {
+    margin: 0 7% 0 7%;
+    padding: 1px;
+    height: 60px;
+    border-left: 1px solid #999999;
+    border-right: 1px solid #999999;
+    border-bottom: 1px solid #999999;
+    background-color: #D2E4E9;
+}
+
+#directory, #apache-config, #hosts-config {
+    border: 1px solid #D6DFEA;
+    background-color: #EFF6FE;
+    padding: 20px;
+    margin-right: 20%;
+}

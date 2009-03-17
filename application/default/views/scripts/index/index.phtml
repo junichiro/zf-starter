@@ -1,1 +1,102 @@
-Hello from the index view script.
+<?php
+$title = 'Start kit';
+$this->headTitle('Zend Framework Starter.');
+$this->placeholder('title')->set('Sample Application');
+$this->placeholder('css')->set('<link href="/css/common.css" rel="stylesheet" type="text/css" />');
+?>
+<div id="header">
+<h1><?php echo $this->placeholder('title'); ?></h1>
+</div>
+<div id="contents">
+<dl id="version">
+<dt id="php-version">PHP Version:</dt><dd><a href="http://jp.php.net/manual/ja/manual.php" target="_blank"><?php echo phpversion(); ?></a></dd>
+<dt id="zf-version">ZendFramework Version:</dt><dd><a href="http://framework.zend.com/manual/ja/" target="_blank"><?php echo Zend_Version::VERSION ?></a></dd>
+</dl>
+<h2>生成されたサンプル<h2>
+<h3>例</h3>
+<ul>
+  <li><a href="/index">http://proj.junichiro.co.uk/index</a></li>
+  <li><a href="/sample">http://proj.junichiro.co.uk/sample</a></li>
+  <li><a href="/sample/index">http://proj.junichiro.co.uk/sample/index</a></li>
+</ul>
+<h3>コントローラやアクションが不足している場合のエラーページ例</h3>
+<ul>
+  <li><a href="/notfound">http://proj.junichiro.co.uk/notfound</a></li>
+  <li><a href="/index/notfound">http://proj.junichiro.co.uk/index/notfound</a></li>
+  <li><a href="/sample/notfound">http://proj.junichiro.co.uk/sample/notfound</a></li>
+</ul>
+
+
+<h2>ファイルレイアウト</h2>
+<pre id="directory">
+|-- application
+|   |-- Initializer.php
+|   |-- bootstrap.php
+|   |-- configs
+|   |   |-- database.ini
+|   |   `-- env.ini
+|   |-- default
+|   |   |-- controllers
+|   |   |   |-- ErrorController.php
+|   |   |   |-- IndexController.php
+|   |   |   `-- SampleController.php
+|   |   `-- views
+|   |       |-- layouts
+|   |       |   `-- main.phtml
+|   |       `-- scripts
+|   |           |-- error
+|   |           |   `-- error.phtml
+|   |           |-- index
+|   |           |   `-- index.phtml
+|   |           `-- sample
+|   |               `-- index.phtml
+|   `-- sample
+|       |-- controllers
+|       |   |-- ErrorController.php
+|       |   |-- IndexController.php
+|       |   `-- SampleController.php
+|       `-- views
+|           |-- layouts
+|           |   `-- main.phtml
+|           `-- scripts
+|               |-- error
+|               |   `-- error.phtml
+|               |-- index
+|               |   `-- index.phtml
+|               `-- sample
+|                   `-- index.phtml
+|-- library
+|   `-- E3
+|       |-- Config.php
+|       |-- Debug.php
+|       |-- Mail.php
+|       `-- Util.php
+`-- public_html
+    |-- favicon.ico
+    `-- index.php
+</pre>
+
+<h2>Apache 設定例</h2>
+<pre id="apache-config">
+&lt;VirtualHost *:80&gt;
+    ServerAdmin junichiro.tobe@gmail.com
+    DocumentRoot &quot;/Users/tobe/Work/project/public_html&quot;
+    ServerName proj.junichiro.co.uk
+    &lt;Directory &quot;/Users/tobe/Work/project/public_html&quot;&gt;
+        Options Indexes FollowSymLinks MultiViews ExecCGI
+        AllowOverride All 
+        Order deny,allow
+        Allow from all
+        #AddHandler application/x-httpd-phpcgi .php
+    &lt;/Directory&gt;
+    ErrorLog &quot;/private/var/log/apache2/project-error_log&quot;
+    CustomLog &quot;/private/var/log/apache2/project-access_log&quot; combined
+&lt;/VirtualHost&gt;
+</pre>
+
+<h2>hosts 設定例</h2>
+<pre id="hosts-config">
+127.0.0.1       proj.junichiro.co.uk
+</pre>
+
+</div>
