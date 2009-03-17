@@ -1,0 +1,13 @@
+<html>
+<head>
+  <title>エラー</title>
+</head>
+<body>
+    <h1>エラー</h1>
+    <p>エラーが発生しました。</p>
+    エラーの種類：<?php echo $this->escape($this->errortype);?><br />
+<?php echo $this->env ?>
+<?php Zend_Debug::dump( $this->exception ); ?>
+<?php Zend_Debug::dump( $this->request ); ?>
+</body>
+</html>
