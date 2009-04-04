@@ -23,6 +23,9 @@ echo $this->headTitle(),"\n";
 ?>
 </head>
 <body>
+<div id="header">
+<h1><?php echo $this->placeholder('title'); ?></h1>
+</div>
 <?php echo $this->layout()->content ?>
 </body>
 </html>
