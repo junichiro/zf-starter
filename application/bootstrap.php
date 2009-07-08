@@ -15,10 +15,11 @@ set_include_path(
 );
 
 require_once 'Initializer.php';
-require_once "Zend/Loader.php";
 
 // Set up autoload.
-Zend_Loader::registerAutoload();
+require_once 'Zend/Loader/Autoloader.php';
+$autoloader = Zend_Loader_Autoloader::getInstance();
+$autoloader->setFallbackAutoloader(true);
 
 // Prepare the front controller.
 $frontController = Zend_Controller_Front::getInstance();
