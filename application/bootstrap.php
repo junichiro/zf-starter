@@ -18,7 +18,7 @@ require_once 'Initializer.php';
 require_once('Zend/Version.php');
 
 // Set up autoload.
-if(Zend_Version::compareVersion('1.8.0')) {
+if(Zend_Version::compareVersion('1.8.0') <= 0) {
     require_once 'Zend/Loader/Autoloader.php';
     $autoloader = Zend_Loader_Autoloader::getInstance();
     $autoloader->setFallbackAutoloader(true);
